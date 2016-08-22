@@ -1,0 +1,7 @@
+{
+    "require": {
+        "slim/slim": "^3.4",
+        "doctrine/orm": "^2.5",
+        "monolog/monolog": "^1.21"
+    }
+}
