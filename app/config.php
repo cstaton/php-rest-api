@@ -11,10 +11,10 @@ $isDevMode = false;
 
 $dbParams = array(
   'driver' => 'pdo_mysql',
-  'dbname' => 'bugs',
+  'dbname' => 'logbugs',
   'host' => 'localhost',
   'user' => 'root',
-  'password' => '',
+  'password' => 'secrets',
 );
 
 $config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode, null, null, false);

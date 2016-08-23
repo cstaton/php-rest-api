@@ -10,10 +10,10 @@ $container['em'] = function() {
 
   $dbParams = array(
     'driver' => 'pdo_mysql',
-    'dbname' => 'bugs',
+    'dbname' => 'logbugs',
     'host' => 'localhost',
     'user' => 'root',
-    'password' => '',
+    'password' => 'secrets',
   );
 
   $config = \Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration($paths, $isDevMode, null, null, false);

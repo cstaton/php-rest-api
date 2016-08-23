@@ -15,9 +15,9 @@ $app = new \Slim\App([
 require __DIR__.'/../app/routes/dependencies.php';
 
 $app->get('/hello/{name}', function (Request $request, Response $response) {
-  $this->logger->addInfo('Route: /hello/name Pinged!');
   $name = $request->getAttribute('name');
-  $response->getBody()->write("abcedHello, $name");
+  $this->logger->addInfo("Route: /hello/name Pinged! value = $name");
+  $response->getBody()->write("Hello, $name");
 
   return $response;
 });
