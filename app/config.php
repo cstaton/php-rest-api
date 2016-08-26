@@ -1,22 +1,22 @@
-<?php
+ <?php
 
-require __DIR__. "/../vendor/autoload.php";
+// require __DIR__. "/../vendor/autoload.php";
 
-use Doctrine\ORM\Tools\Setup;
-use Doctrine\ORM\EntityManager;
+// use Doctrine\ORM\Tools\Setup;
+// use Doctrine\ORM\EntityManager;
 
-$paths = array(__DIR__."/entity");
+// $paths = array(__DIR__."/entity");
 
-$isDevMode = false;
+// $isDevMode = false;
 
-$dbParams = array(
-  'driver' => 'pdo_mysql',
-  'dbname' => 'bugs',
-  'host' => 'localhost',
-  'user' => 'root',
-  'password' => '',
-);
+// $dbParams = array(
+//   'driver' => 'pdo_mysql',
+//   'dbname' => 'bugs',
+//   'host' => 'localhost',
+//   'user' => 'root',
+//   'password' => '',
+// );
 
-$config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode, null, null, false);
+// $config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode, null, null, false);
 
-$entityManager = EntityManager::create($dbParams, $config);
+// $entityManager = EntityManager::create($dbParams, $config);

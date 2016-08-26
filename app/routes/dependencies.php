@@ -2,22 +2,36 @@
 
 $container = $app->getContainer();
 
+// $container['em'] = function() {
+
+//   $paths = array(__DIR__."/entity");
+
+//   $isDevMode = false;
+
+//   $dbParams = array(
+//     'driver' => 'pdo_mysql',
+//     'dbname' => 'bugs',
+//     'host' => 'localhost',
+//     'user' => 'root',
+//     'password' => '',
+//   );
+
+//   $config = \Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration($paths, $isDevMode, null, null, false);
+
+//   return \Doctrine\ORM\EntityManager::create($dbParams, $config);
+// };
+
 $container['em'] = function() {
-
-  $paths = array(__DIR__."/entity");
-
+  $paths = array(__DIR__."/Model");
   $isDevMode = false;
-
   $dbParams = array(
     'driver' => 'pdo_mysql',
-    'dbname' => 'bugs',
+    'dbname' => 'my_app_db',
     'host' => 'localhost',
     'user' => 'root',
     'password' => '',
   );
-
   $config = \Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration($paths, $isDevMode, null, null, false);
-
   return \Doctrine\ORM\EntityManager::create($dbParams, $config);
 };
 

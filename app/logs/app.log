@@ -1,4 +1,3 @@
-[2016-08-22 03:07:36] my_logger.INFO: Route: /api/product Pinged! [] []
-[2016-08-22 03:08:10] my_logger.INFO: Route: /api/product Pinged! [] []
-[2016-08-22 03:08:15] my_logger.INFO: Route: /api/product Pinged! [] []
-[2016-08-22 03:11:05] my_logger.INFO: Route: /hello/name Pinged! [] []
+[2016-08-26 00:43:55] my_logger.INFO: Route: /api/product Pinged! [] []
+[2016-08-26 00:44:01] my_logger.INFO: Route: /API/customer/list CALLED [] []
+[2016-08-26 00:44:02] my_logger.INFO: Route: /API/customer/list CALLED [] []
