@@ -19,6 +19,12 @@ class Product {
   */
   protected $name;
 
+
+  /**
+  * @ORM\ManyToOne(targetEntity="users", inversedBy="assignedProducts")
+  */
+  protected $userId;
+
   /**
   *@ORM\return integer
   */
@@ -37,6 +43,9 @@ class Product {
     return get_object_vars($this);
   }
 
+  public function setProducts() {
+    $this->userId->getUsers()->removeElement($this);
+  }
 
   // public function setName($name) {
   //   $this->name = $name;

@@ -28,22 +28,40 @@ DROP TABLE IF EXISTS products;
 
 CREATE TABLE `products` (
   `id` int(20) NOT NULL AUTO_INCREMENT,
+  `user_id` int(20) NOT NUll,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  FOREIGN KEY (`user_id`) references users(`id`),
   PRIMARY KEY(`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT INTO `products`
-  (`name`)
-  values ('Test Product');
+  (`name`, `user_id`)
+  values ('Test Product', 1);
 
 INSERT INTO `products`
-  (`name`)
-  values ('Card Holder');
+  (`name`, `user_id`)
+  values ('Card Holder', 1);
 
 INSERT INTO `products`
-  (`name`)
-  values ('Business Portal');
+  (`name`, `user_id`)
+  values ('Business Portal', 1);
 
 INSERT INTO `products`
-  (`name`)
-  values ('Shinobi');
+  (`name`, `user_id`)
+  values ('Shinobi', 1);
+
+INSERT INTO `products`
+  (`name`, `user_id`)
+  values ('Test Product', 2);
+
+INSERT INTO `products`
+  (`name`, `user_id`)
+  values ('Card Holder', 3);
+
+INSERT INTO `products`
+  (`name`, `user_id`)
+  values ('Business Portal', 3);
+
+INSERT INTO `products`
+  (`name`, `user_id`)
+  values ('Shinobi', 3);

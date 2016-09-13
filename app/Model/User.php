@@ -11,7 +11,8 @@ use Doctrine\ORM\Mapping AS ORM;
 
 class User {
 
-  /** @ORM\Id @ORM\Column(type="integer") @ORM\GeneratedValue **/
+  /** @ORM\Id @ORM\Column(type="integer") @ORM\GeneratedValue 
+      @ORM\OneToMany(targetEntity="products",mappedBy="users")**/
   protected $id;
   
   /** @ORM\Column(type="string", name="name") **/
@@ -19,6 +20,9 @@ class User {
 
   /** @ORM\Column(type="string") **/
   protected $email;
+
+  /** #ORM\OneToMany(targetEntity="Product", mappedBy="userId") **/
+  protected $assignedProducts = null;
 
   /**
   *@ORM\return integer
@@ -43,6 +47,8 @@ class User {
     return get_object_vars($this);
   }
 
-
+  public function getUsers() {
+    return $this->findAll();
+  }
 
 }
