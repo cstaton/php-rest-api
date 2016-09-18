@@ -2,6 +2,7 @@
 namespace cstaton\API\Controllers;
 
 use cstaton\Models\User;
+use cstaton\API\DataTransferObjects\UserDTO;
 
 class UserController extends AbstractController 
 {
@@ -14,8 +15,9 @@ class UserController extends AbstractController
   public function testing($request, $response) 
   {
     $users = User::dbQuery()->findAll();
-    var_dump($users);
-
-    return $response->withJson($users);
+    //Query for users out of database
+    $userDTO = UserDTO::from Array($users);
+    //Map what gets returned
+    return $response->withJson($userDTO);
   }
 }

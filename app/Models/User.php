@@ -33,12 +33,12 @@ class User extends AbstractEntityModel {
     return $this->name;
   }
 
-  public function getArrayCopy(){
-    return get_object_vars($this);
+  public function getEmail() {
+    return $this->email;
   }
 
-  public function getUsers() {
-    return $this->findAll();
+  public function getArrayCopy(){
+    return get_object_vars($this);
   }
 
 }
