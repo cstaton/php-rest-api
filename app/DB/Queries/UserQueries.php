@@ -1,5 +1,5 @@
 <?php
-namespace myApp\Queries;
+namespace cstaton\Queries;
 
 use Doctrine\ORM\EntityRepository;
 

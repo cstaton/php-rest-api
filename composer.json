@@ -1,12 +1,12 @@
 {
-    "require": {
-        "slim/slim": "^3.4",
-        "doctrine/orm": "^2.5",
-        "monolog/monolog": "^1.21"
-    },
-    "autoload": {
-      "psr-4": {
-        "myApp\\": "app"
-      }
+  "require": {
+      "slim/slim": "^3.4",
+      "doctrine/orm": "^2.5",
+      "monolog/monolog": "^1.21"
+  },
+  "autoload": {
+    "psr-4": {
+      "cstaton\\": "app"
     }
+  }
 }
