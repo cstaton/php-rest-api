@@ -17,6 +17,9 @@ class User extends AbstractEntityModel {
   /** @Column(type="string") **/
   protected $email;
 
+  /** @Column(type="datetime", name="date_created") * */
+  protected $dateCreated;
+
   public function getId() {
     return $this->id;
   }
@@ -35,6 +38,10 @@ class User extends AbstractEntityModel {
 
   public function getEmail() {
     return $this->email;
+  }
+
+  public function getDateCreated() {
+    return $this->dateCreated;
   }
 
   public function getArrayCopy(){

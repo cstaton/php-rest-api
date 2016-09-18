@@ -16,7 +16,7 @@ class UserController extends AbstractController
   {
     $users = User::dbQuery()->findAll();
     //Query for users out of database
-    $userDTO = UserDTO::from Array($users);
+    $userDTO = UserDTO::fromArray($users);
     //Map what gets returned
     return $response->withJson($userDTO);
   }

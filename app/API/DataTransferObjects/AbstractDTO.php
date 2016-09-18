@@ -18,7 +18,8 @@ abstract class AbstractDTO implements \JsonSerializable
     foreach($list as $item) {
 
       $className = get_called_class();
-
+      // var_dump($className);
+      // var_dump($item);
       array_push($dtos, new $className($item));
     }
 
