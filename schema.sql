@@ -16,11 +16,11 @@ INSERT INTO `users`
 
 INSERT INTO `users`
   (`name`, `email`, `date_created`)
-  values ('Jeff', 'jeff@plastiq.com', now());
+  values ('Jeff', 'jeff@gmail.com', now());
 
 INSERT INTO `users`
   (`name`, `email`, `date_created`)
-  values ('Michel', 'michel@plastiq.com', now());
+  values ('Michel', 'michel@gmail.com', now());
 
 
 
@@ -34,34 +34,3 @@ CREATE TABLE `products` (
   PRIMARY KEY(`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-INSERT INTO `products`
-  (`name`, `user_id`)
-  values ('Test Product', 1);
-
-INSERT INTO `products`
-  (`name`, `user_id`)
-  values ('Card Holder', 1);
-
-INSERT INTO `products`
-  (`name`, `user_id`)
-  values ('Business Portal', 1);
-
-INSERT INTO `products`
-  (`name`, `user_id`)
-  values ('Shinobi', 1);
-
-INSERT INTO `products`
-  (`name`, `user_id`)
-  values ('Test Product', 2);
-
-INSERT INTO `products`
-  (`name`, `user_id`)
-  values ('Card Holder', 3);
-
-INSERT INTO `products`
-  (`name`, `user_id`)
-  values ('Business Portal', 3);
-
-INSERT INTO `products`
-  (`name`, `user_id`)
-  values ('Shinobi', 3);
