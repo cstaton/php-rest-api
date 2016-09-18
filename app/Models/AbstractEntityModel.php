@@ -17,7 +17,7 @@ abstract class AbstractEntityModel
   public final static function dbQuery()
   {
     $className = get_called_class();
-
+    
     return self::getEntityManager()->getRepository($className);
   }
 
@@ -27,5 +27,5 @@ abstract class AbstractEntityModel
   }
 
 
-  public abstract function validate();
+  // public abstract function validate();
 }

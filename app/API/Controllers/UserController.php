@@ -13,6 +13,9 @@ class UserController extends AbstractController
 
   public function testing($request, $response) 
   {
-    return $response->withJson('testing controller!!');
+    $users = User::dbQuery()->findAll();
+    var_dump($users);
+
+    return $response->withJson($users);
   }
 }

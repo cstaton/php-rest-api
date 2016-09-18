@@ -1,9 +1,7 @@
 <?php
-namespace cstaton\Queries;
+namespace cstaton\DB\Queries;
 
-use Doctrine\ORM\EntityRepository;
-
-class UserQueries extends EntityRepository {
+class UserQueries extends AbstractEntityQueries {
 
   public function findMeSomeUsers() {
     
